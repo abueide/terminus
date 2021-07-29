@@ -13,4 +13,5 @@ include(":core")
 include(":mobile")
 include(":android")
 include(":desktop")
+include(":web")
 
