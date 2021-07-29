@@ -6,10 +6,6 @@ plugins {
 group = "com.abysl.terminus"
 version = "1.0-SNAPSHOT"
 
-repositories {
-    mavenCentral()
-}
-
 kotlin {
     jvm {
         compilations.all {
@@ -35,7 +31,7 @@ kotlin {
         else -> throw GradleException("Host OS is not supported in Kotlin/Native.")
     }
 
-    
+
     iosArm64 {
         binaries {
             framework {
@@ -51,7 +47,13 @@ kotlin {
         }
     }
     sourceSets {
-        val commonMain by getting
+        val commonMain by getting {
+
+            dependencies {
+                api("io.github.matrixkt:client:0.1.5")
+                api("io.github.matrixkt:olm:0.1.5")
+            }
+        }
         val commonTest by getting {
             dependencies {
                 implementation(kotlin("test"))

@@ -10,15 +10,10 @@ plugins {
 group = "com.abysl.terminus"
 version = "1.0"
 
-repositories {
-    mavenCentral()
-    maven("https://maven.pkg.jetbrains.space/public/p/compose/dev")
-}
-
 dependencies {
-    testImplementation(kotlin("test"))
     implementation(compose.desktop.currentOs)
     implementation(project(":core"))
+    testImplementation(kotlin("test"))
 }
 
 tasks.test {

@@ -7,12 +7,6 @@ plugins {
 group = "com.abysl.terminus"
 version = "1.0"
 
-// Add maven repositories
-repositories {
-    mavenCentral()
-    maven("https://maven.pkg.jetbrains.space/public/p/compose/dev")
-}
-
 // Enable JS(IR) target and add dependencies
 kotlin {
     js(IR) {

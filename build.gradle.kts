@@ -17,5 +17,12 @@ allprojects {
     repositories {
         google()
         mavenCentral()
+        maven("https://maven.pkg.jetbrains.space/public/p/compose/dev")
+        maven("https://maven.pkg.github.com/Dominaezzz/matrix-kt") {
+            credentials {
+                username = System.getenv("GITHUB_USER") // Your GitHub username.
+                password = System.getenv("GITHUB_TOKEN") // A GitHub token with `read:packages`.
+            }
+        }
     }
 }
