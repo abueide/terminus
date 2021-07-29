@@ -10,6 +10,7 @@ pluginManagement {
 rootProject.name = "terminus"
 
 
-include(":androidApp")
-include(":shared")
+include(":android")
+include(":mobile")
+include(":core")
 
