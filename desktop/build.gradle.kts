@@ -4,14 +4,13 @@ import org.jetbrains.kotlin.gradle.tasks.KotlinCompile
 
 plugins {
     kotlin("jvm")
-    id("org.jetbrains.compose") version "0.5.0-build262"
+    id("org.jetbrains.compose") version "0.5.0-build270"
 }
 
 group = "com.abysl.terminus"
 version = "1.0"
 
 repositories {
-    jcenter()
     mavenCentral()
     maven("https://maven.pkg.jetbrains.space/public/p/compose/dev")
 }
