@@ -2,7 +2,7 @@ plugins {
     kotlin("multiplatform")
 }
 
-group = "com.abysl"
+group = "com.abysl.terminus"
 version = "1.0-SNAPSHOT"
 
 repositories {
@@ -42,6 +42,13 @@ kotlin {
             }
         }
     }
+    iosX64 {
+        binaries {
+            framework {
+                baseName = "library"
+            }
+        }
+    }
     sourceSets {
         val commonMain by getting
         val commonTest by getting {
@@ -57,5 +64,7 @@ kotlin {
         val nativeTest by getting
         val iosArm64Main by getting
         val iosArm64Test by getting
+        val iosX64Main by getting
+        val iosX64Test by getting
     }
 }

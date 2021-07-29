@@ -1,7 +1,6 @@
 pluginManagement {
     repositories {
         google()
-        jcenter()
         gradlePluginPortal()
         mavenCentral()
     }
@@ -10,7 +9,7 @@ pluginManagement {
 rootProject.name = "terminus"
 
 
+include(":core")
 include(":android")
 include(":mobile")
-include(":core")
 
