@@ -53,6 +53,7 @@ android {
     }
 }
 
+/*
 val packForXcode by tasks.creating(Sync::class) {
     group = "build"
     val mode = System.getenv("CONFIGURATION") ?: "DEBUG"
@@ -66,4 +67,4 @@ val packForXcode by tasks.creating(Sync::class) {
     into(targetDir)
 }
 
-tasks.getByName("build").dependsOn(packForXcode)
+tasks.getByName("build").dependsOn(packForXcode)*/

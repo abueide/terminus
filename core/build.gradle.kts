@@ -2,6 +2,7 @@ plugins {
     kotlin("multiplatform")
 }
 
+
 group = "com.abysl.terminus"
 version = "1.0-SNAPSHOT"
 
