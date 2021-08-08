@@ -6,10 +6,10 @@ pluginManagement {
     }
 }
 
-rootProject.name = "PeopleInSpace"
+rootProject.name = "terminus"
 
-include(":app", ":common", ":compose-desktop")
+include(":common")
+include(":android");
+include(":desktop")
 include(":web")
-include(":compose-web")
-include(":backend")
-include(":wearApp")
+include(":server")

@@ -1,37 +1,36 @@
 plugins {
-    kotlin("js")
-    kotlin("plugin.serialization")
+    kotlin("multiplatform")
+    id("org.jetbrains.compose") version "1.0.0-alpha2"
 }
 
-dependencies {
-    implementation(kotlin("stdlib-js"))
+version = "1.0"
 
-    with(Deps.Kotlinx) {
-        implementation(htmlJs)
-    }
-
-    with(Deps.React) {
-        implementation(styled)
-        implementation(react)
-        implementation(dom)
-        implementation(routerDom)
-    }
-
-    implementation(npm("react", "16.13.0"))
-    implementation(npm("react-dom", "16.13.0"))
-
-    // Material Design Components for React
-    implementation(npm("@material-ui/core", "4.11.1"))
-
-    // ReactJS Maps
-    implementation(npm("pigeon-maps", "0.19.6"))
-
-    implementation(project(":common"))
+repositories {
+    mavenCentral()
+    maven("https://maven.pkg.jetbrains.space/public/p/compose/dev")
 }
 
 kotlin {
     js(IR) {
         browser()
         binaries.executable()
+    }
+
+    sourceSets {
+        val jsMain by getting {
+            dependencies {
+                implementation(compose.web.widgets)
+                implementation(compose.web.core)
+                implementation(compose.runtime)
+
+                implementation(project(":common"))
+            }
+        }
+    }
+}
+
+compose.desktop {
+    application {
+        mainClass = ""
     }
 }

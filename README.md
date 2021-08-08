@@ -1,4 +1,4 @@
-# PeopleInSpace
+ # PeopleInSpace
 
 Minimal **Kotlin Multiplatform** project with SwiftUI, Jetpack Compose, Compose for Desktop, Compose for Web, and Kotlin/JS + React clients along with Ktor backend. Currently running on
 * Android (Jetpack Compose)
