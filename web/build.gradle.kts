@@ -1,6 +1,6 @@
 plugins {
     kotlin("multiplatform")
-    id("org.jetbrains.compose") version "1.0.0-alpha2"
+    id("org.jetbrains.compose")
 }
 
 version = "1.0"
@@ -22,15 +22,8 @@ kotlin {
                 implementation(compose.web.widgets)
                 implementation(compose.web.core)
                 implementation(compose.runtime)
-
                 implementation(project(":common"))
             }
         }
-    }
-}
-
-compose.desktop {
-    application {
-        mainClass = ""
     }
 }

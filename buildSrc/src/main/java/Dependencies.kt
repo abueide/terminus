@@ -50,6 +50,7 @@ object Deps {
         const val kotlinter = "org.jmailen.gradle:kotlinter-gradle:${Versions.kotlinterGradle}"
         const val shadow = "gradle.plugin.com.github.jengelman.gradle.plugins:shadow:${Versions.shadow}"
         const val sqlDelight = "com.squareup.sqldelight:gradle-plugin:${Versions.sqlDelight}"
+        const val compose = "org.jetbrains.compose:compose-gradle-plugin:1.0.0-alpha3"
     }
 
     object Kotlinx {
