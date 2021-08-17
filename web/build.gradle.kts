@@ -1,7 +1,7 @@
 // Add compose gradle plugin
 plugins {
     kotlin("multiplatform")
-    id("org.jetbrains.compose") version "0.5.0-build270"
+    id("org.jetbrains.compose")
 }
 
 group = "com.abysl.terminus"
@@ -16,6 +16,7 @@ kotlin {
     sourceSets {
         val jsMain by getting {
             dependencies {
+                implementation(project(":core"))
                 implementation(compose.web.core)
                 implementation(compose.runtime)
             }

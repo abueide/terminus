@@ -48,11 +48,10 @@ kotlin {
     }
     sourceSets {
         val commonMain by getting {
-
-            dependencies {
-                api("io.github.matrixkt:client:0.1.5")
-                api("io.github.matrixkt:olm:0.1.5")
-            }
+//            dependencies {
+//                api("io.github.matrixkt:client:0.1.5")
+//                api("io.github.matrixkt:olm:0.1.5")
+//            }
         }
         val commonTest by getting {
             dependencies {

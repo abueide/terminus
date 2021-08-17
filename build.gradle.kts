@@ -3,10 +3,12 @@ buildscript {
         gradlePluginPortal()
         google()
         mavenCentral()
+        maven("https://maven.pkg.jetbrains.space/public/p/compose/dev")
     }
     dependencies {
         classpath("org.jetbrains.kotlin:kotlin-gradle-plugin:1.5.21")
-        classpath("com.android.tools.build:gradle:4.2.0")
+        classpath("org.jetbrains.compose:compose-gradle-plugin:1.0.0-alpha3")
+        classpath("com.android.tools.build:gradle:7.0.0")
     }
 }
 
@@ -18,11 +20,9 @@ allprojects {
         google()
         mavenCentral()
         maven("https://maven.pkg.jetbrains.space/public/p/compose/dev")
-        maven("https://maven.pkg.github.com/Dominaezzz/matrix-kt") {
-            credentials {
-                username = System.getenv("GITHUB_USER") // Your GitHub username.
-                password = System.getenv("GITHUB_TOKEN") // A GitHub token with `read:packages`.
-            }
-        }
     }
+}
+
+rootProject.plugins.withType(org.jetbrains.kotlin.gradle.targets.js.nodejs.NodeJsRootPlugin::class.java) {
+    rootProject.the<org.jetbrains.kotlin.gradle.targets.js.nodejs.NodeJsRootExtension>().versions.webpackDevServer.version = "4.0.0-rc.0"
 }
